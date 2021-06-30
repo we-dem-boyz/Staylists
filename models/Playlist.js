@@ -31,17 +31,17 @@ Playlist.init(
                 autoIncrement: true,
             },
             name: {
-                type: datatype.STRING,
+                type: DataTypes.STRING,
                 allowNull: false,
 
 
             },
             genere: {
-                type: datatype.STRING,
+                type: DataTypes.STRING,
                 allowNull: false,
             },
             artist: {
-                type: datatype.STRING,
+                type: DataTypes.STRING,
                 allowNull: false,
             }
 
@@ -59,7 +59,7 @@ Playlist.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'playlist',
+        modelName: 'Playlist',
     }
 );
 
