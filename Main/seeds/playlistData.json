@@ -1,1 +1,35 @@
-
+[
+    {
+        "name": "Playlist 1",
+        "description": "A playlist for homework.",
+        "songs": [
+            {
+                "name": "I will Survive",
+                "genere": "Pop",
+                "artist": "Gloria Gaynor"
+            }
+        ]
+    },
+    {
+        "name": "Playlist 2",
+        "description": "A playlist for cooking",
+        "songs": [
+            {
+                "name": "I will Survive",
+                "genere": "Pop",
+                "artist": "Gloria Gaynor"
+            }
+        ]
+    },
+    {
+        "name": "Playlist 3",
+        "description": "A playlist for the gym.",
+        "songs": [
+            {
+                "name": "I will Survive",
+                "genere": "Pop",
+                "artist": "Gloria Gaynor"
+            }
+        ]
+    }
+]
