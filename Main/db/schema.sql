@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS Staylists_db ;
-CREATE DATABASE Staylists_db;
