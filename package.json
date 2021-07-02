@@ -1,7 +1,7 @@
 {
-  "name": "crowd-funding",
+  "name": "staylists",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playlists, here to stay",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,5 +25,13 @@
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/we-dem-boyz/Staylists.git"
+  },
+  "bugs": {
+    "url": "https://github.com/we-dem-boyz/Staylists/issues"
+  },
+  "homepage": "https://github.com/we-dem-boyz/Staylists#readme"
 }
