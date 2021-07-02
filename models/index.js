@@ -1,14 +1,13 @@
-const User = require('./User');
-const Playlist = require('./Playlist');
-
+const User = require('./User')
+const Playlist = require('./Playlist')
 
 User.hasMany(Playlist, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-});
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+})
 
 Playlist.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+  foreignKey: 'user_id'
+})
 
-module.exports = { User, Playlist };
+module.exports = { User, Playlist }
