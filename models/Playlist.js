@@ -21,23 +21,23 @@ Playlist.init(
       allowNull: false,
       defaultValue: DataTypes.NOW
     },
-    songs: [
-      {
-        id: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          primaryKey: true,
-          autoIncrement: true
-        },
-        name: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
-        genre: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
-      }],
+    // songs: [
+    //   {
+    //     id: {
+    //       type: DataTypes.INTEGER,
+    //       allowNull: false,
+    //       primaryKey: true,
+    //       autoIncrement: true
+    //     },
+    //     name: {
+    //       type: DataTypes.STRING,
+    //       allowNull: false
+    //     },
+    //     genre: {
+    //       type: DataTypes.STRING,
+    //       allowNull: false
+    //     },
+    //   }],
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -45,6 +45,13 @@ Playlist.init(
         key: 'id',
       },
     },
+    song_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    }
   },
   {
     sequelize,
