@@ -1,7 +1,7 @@
 [
     {
         "name": "Playlist 1",
-        "description": "A playlist for homework.",
+        "description": "A Playlist for homework.",
         "songs": [
             {
                 "name": "I will Survive",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Playlist 2",
-        "description": "A playlist for cooking",
+        "description": "A Playlist for cooking",
         "songs": [
             {
                 "name": "I will Survive",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Playlist 3",
-        "description": "A playlist for the gym.",
+        "description": "A Playlist for the gym.",
         "songs": [
             {
                 "name": "I will Survive",

@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const playlistData = await Playlist.findAll({
+    const PlaylistData = await Playlist.findAll({
       include: [
         {
           model: Playlist,
@@ -14,10 +14,10 @@ router.get('/', async (req, res) => {
     });
   
       // Serialize data so the template can read it
-    const playlists = playlistData.map((playlist) => playlist.get({ plain: true }));
+    const Playlist = PlaylistData.map((Playlist) => Playlist.get({ plain: true }));
   
     res.render('homepage', { 
-      playlists, 
+      Playlists, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/Playlist/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
       include: [
@@ -51,7 +51,7 @@ router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Playlist }],
+      include: [{ model: Staylist }],
     });
 
     const user = userData.get({ plain: true });

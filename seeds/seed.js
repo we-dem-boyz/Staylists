@@ -2,7 +2,7 @@ const sequelize = require('../config/connection')
 const { User, Playlist } = require('../models')
 
 const userData = require('./userData.json')
-const playlistData = require('./playlistData.json')
+const PlaylistData = require('./PlaylistData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true })
@@ -12,9 +12,9 @@ const seedDatabase = async () => {
     returning: true
   })
 
-  for (const playlist of playlistData) {
+  for (const Playlist of PlaylistData) {
     await Playlist.create({
-      ...playlist,
+      ...Playlist,
       user_id: users[Math.floor(Math.random() * users.length)].id
     })
   }

@@ -1,5 +1,5 @@
 {
-  "name": "staylists",
+  "name": "staylist",
   "version": "1.0.0",
   "description": "Playlists, here to stay",
   "main": "server.js",
