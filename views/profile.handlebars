@@ -6,33 +6,33 @@
 
 <div class='row mt-4'>
   <div class='col-md-6'>
-    <h3>playlist</h3>
+    <h3>Staylist</h3>
 
-    <form class='form new-playlist-form'>
+    <form class='form new-Staylist-form'>
       <div class='form-group'>
-        <label for='playlist-name'>playlist name:</label>
+        <label for='Staylist-name'>Staylist name:</label>
         <input
           class='form-input'
           type='text'
-          id='playlist-name'
-          name='playlist-name'
+          id='Staylist-name'
+          name='Staylist-name'
         />
       </div>
       <div class='form-group'>
-        <label for='playlist-funding'>needed funding ($):</label>
+        <label for='Staylist-funding'>needed funding ($):</label>
         <input
           class='form-input'
           type='number'
-          id='playlist-funding'
-          name='playlist-funding'
+          id='Staylist-funding'
+          name='Staylist-funding'
         />
       </div>
       <div class='form-group'>
-        <label for='playlist-desc'>description:</label>
+        <label for='Playlist-desc'>description:</label>
         <textarea
           class='form-input'
-          id='playlist-desc'
-          name='playlist-desc'
+          id='Playlist-desc'
+          name='Playlist-desc'
         ></textarea>
       </div>
       <div class='form-group'>
@@ -41,19 +41,19 @@
     </form>
   </div>
 
-  {{#if playlist.length}}
+  {{#if Playlist.length}}
     <div class='col-md-6 song-list'>
-      <h3>Current playlist:</h3>
+      <h3>Current Playlist:</h3>
 
-      {{#each playlist as |playlist|}}
+      {{#each Playlist as |Playlist|}}
         <div class='row mb-2'>
           <div class='col-md-8'>
-            <h4><a href='/playlist/{{playlist.id}}'>{{playlist.name}}</a></h4>
+            <h4><a href='/Playlist/{{Playlist.id}}'>{{Playlist.name}}</a></h4>
           </div>
           <div class='col-md-4'>
             <button
               class='btn btn-sm btn-danger'
-              data-id='{{playlist.id}}'
+              data-id='{{Playlist.id}}'
             >DELETE</button>
           </div>
         </div>

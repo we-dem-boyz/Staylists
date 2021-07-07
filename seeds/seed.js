@@ -6,7 +6,6 @@ const userData = require('./userData.json')
 const playlistData = require('./playlistData.json')
 const songData = require("./songData.json")
 
-
 const seedDatabase = async () => {
   await sequelize.sync({ force: true })
 
@@ -21,7 +20,7 @@ const seedDatabase = async () => {
   })
   for (const playlist of playlistData) {
     await Playlist.create({
-      ...playlist,
+      ...Playlist,
       user_id: users[Math.floor(Math.random() * users.length)].id
     })
   }
