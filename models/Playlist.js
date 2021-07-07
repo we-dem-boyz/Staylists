@@ -1,6 +1,8 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
-class Playlist extends Model { }
+
+class Playlist extends Model {}
+
 Playlist.init(
   {
     id: {
@@ -21,36 +23,34 @@ Playlist.init(
       allowNull: false,
       defaultValue: DataTypes.NOW
     },
-    // songs: [
-    //   {
-    //     id: {
-    //       type: DataTypes.INTEGER,
-    //       allowNull: false,
-    //       primaryKey: true,
-    //       autoIncrement: true
-    //     },
-    //     name: {
-    //       type: DataTypes.STRING,
-    //       allowNull: false
-    //     },
-    //     genre: {
-    //       type: DataTypes.STRING,
-    //       allowNull: false
-    //     },
-    //   }],
+    songs: [
+      {
+        id: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          primaryKey: true,
+          autoIncrement: true
+        },
+        name: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
+        genere: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
+        artist: {
+          type: DataTypes.STRING,
+          allowNull: false
+        }
+      }
+    ],
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
-      },
-    },
-    song_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
+        key: 'id'
+      }
     }
   },
   {
@@ -58,10 +58,8 @@ Playlist.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'playlist',
+    modelName: 'Playlist'
   }
-  
-);
+)
 
 module.exports = Playlist
-
