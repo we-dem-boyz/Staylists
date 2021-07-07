@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS Staylist_db ;
-CREATE DATABASE Staylist_db;
+DROP DATABASE IF EXISTS playlist_db ;
+CREATE DATABASE playlist_db;
