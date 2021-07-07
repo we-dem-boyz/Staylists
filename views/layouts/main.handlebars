@@ -1,44 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Staylists</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="stylesheet" href="/css/menu.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My playlist!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+    </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Playlist!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
+  <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 sf-gray-primary">
+                    <button class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="list-group">
+                        <li class="list-group-item sf-list-group-item">
+                            <span class="fa fa-home"></span>
+                            Home
+                        </li>
+                        <li class="list-group-item sf-list-group-item">
+                            <span class="fa fa-search"></span>
+                            Explore
+                        </li>
+                        <li class="list-group-item sf-list-group-item">
+                            <span class="fa fa-folder-open"></span>
+                            Create New Playlist
+                        </li>
+                    </ul> 
+                       
+                    <label>Your Library
+                    </label>                
+                    <ul class="list-group">
+                        <li class="list-group-item sf-list-group-item">Liked Playlists</li>
+                        <!-- <li class="list-group-item sf-list-group-item">Recently Played</li> -->
+                        <li class="list-group-item sf-list-group-item">Songs You Liked</li>
+                        <li class="list-group-item sf-list-group-item">Your Playlists</li>
+    
+                    </ul>
 
-  <!-- Render script for logged in users only -->
+
+
+
+
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+  <footer>
+      Created by We-Dem-Boyz plus Lexi, heck yeah bro
+  </footer>
+
+  <!-- Only include the logout script if the user is logged in -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 4dd1da8fb9a66b29a181ae562dbe92993121a6e5

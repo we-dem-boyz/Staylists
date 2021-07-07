@@ -1,25 +1,188 @@
-
-header, .playlist:not(:last-child) {
-    border-bottom: 1px solid rgb(168, 119, 189);
-  }
-  
-  .no-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #1b89bc;
-    text-decoration: none;
+body {
     font-size: 100%;
+    padding: 1%;
+    background-color: rgb(19, 161, 218);
+    animation-name: spectrum;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  
+    animation-duration: 8s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
   }
   
-  .no-button:hover {
-    color: #065b83;
-    text-decoration: underline;
+  @keyframes spectrum {
+    from {
+      background-color: #03fcf0;
+    }
+  
+    to {
+      background-color: violet;
+    }
   }
   
-  .dollar-amount {
-    color: #056605;
-    font-weight: bold;
-    margin-left: -5px;
+  /* This is the left container */
+  .sf-gray-primary {
+    background-color: #121212;
   }
+  
+  .sf-gray-secondary {
+    background-color: #272727;
+  }
+  
+  /* This is the middle container */
+  .sf-playlist {
+    background-color: #171717;
+  }
+  
+  .sf-dropdown {
+    background-color: #171717;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .sf-dropdown:hover {
+    color: white;
+  }
+  
+  .sf-dropdown-menu {
+    background-color: #272727;
+    color: white;
+  }
+  
+  .sf-dropdown-item {
+    background-color: #272727;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .sf-dropdown-item:hover {
+    background-color: #151515;
+    color: white;
+  }
+  
+  .sf-btn-primary {
+    background-color: #06d3d6;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+  
+  .sf-btn-play {
+    color: white;
+    font-size: 22px !important;
+  }
+  
+  .sf-btn-default {
+    background-color: #272727;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+  
+  .sf-btn-default:focus {
+    background-color: red;
+  }
+  
+  .sf-btn-default-2 {
+    background-color: #272727;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+  
+  .sf-btn-default-2:focus {
+    background-color: #03fcf0;
+  }
+  
+  .sf-list-group-item {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .sf-list-group-item:hover {
+    background-color: #272727;
+    color: white;
+  }
+  
+  .hamburger {
+    background-color: transparent;
+    border: 0;
+    color: #03fcf0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .hamburger:focus {
+    outline: none;
+  }
+  
+  .sf-input {
+    border-radius: 20px;
+    border: none;
+    font-size: 10px;
+  }
+  
+  .sf-name-music {
+    color: white;
+    font-size: 12px;
+  }
+  
+  .sf-progress {
+    height: 0.2rem;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  
+  .sf-btn-control {
+    background-color: #272727;
+    color: white;
+  }
+  
+  .sf-link {
+    font-size: 14px;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .sf-link:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px #03fcf0 solid;
+  }
+  
+  .title {
+    color: white;
+  }
+  
+  .fa {
+    font-size: 16px;
+  }
+  
+  label {
+    color: white;
+    font-size: 9px;
+  }
+  
+  th {
+    border: none !important;
+    font-size: 10px;
+  }
+  
+  td,
+  tr {
+    color: white;
+    font-size: 14px;
+    border-color: #272727 !important;
+  }
+  
+  tr:hover {
+    background-color: #272727;
+  }
+  
+  @media screen and (max-width: 920px) {
+    .sf-list-group-item {
+      display: none;
+    }
+  }
+  
