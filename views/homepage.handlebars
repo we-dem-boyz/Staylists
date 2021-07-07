@@ -1,0 +1,23 @@
+{{#each Playlist as |Playlist| }}
+<div class="row mb-4 playlist">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/Playlist/{{Playlist.id}}">{{Playlist.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money">💲</span>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="dollar-amount">{{format_amount Playlist.needed_funding}}</span>
+      needed!
+    </p>
+    <p>Created by {{Playlist.user.name}} on {{format_date Playlist.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{Playlist.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
