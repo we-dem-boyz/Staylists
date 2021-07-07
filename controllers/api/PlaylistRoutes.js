@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Playlist } = require('../models');
+const { Playlist } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -32,19 +32,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const playlistData = await Playlist.destroy({
+      const PlaylistData = await Playlist.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
         },
       });
   
-      if (!playlistData) {
-        res.status(404).json({ message: 'No playlist found with this id!' });
+      if (!PlaylistData) {
+        res.status(404).json({ message: 'No Playlist found with this id!' });
         return;
       }
   
-      res.status(200).json(playlistData);
+      res.status(200).json(PlaylistData);
     } catch (err) {
       res.status(500).json(err);
     }
