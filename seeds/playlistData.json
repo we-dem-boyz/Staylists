@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Playlist 1",
+        "description": "A playlist for homework.",
+       
+        "song_id":[1,2,3]
+    },
+    {
+        "name": "Playlist 2",
+        "description": "A playlist for cooking",
+       
+        "song_id":[1,2,3]
+    },
+    {
+        "name": "Playlist 3",
+        "description": "A playlist for the gym.",
+       
+        "song_id":[1,2,3]
+    }
+]
