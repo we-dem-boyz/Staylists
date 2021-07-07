@@ -1,7 +1,7 @@
 [
     {
         "name": "Playlist 1",
-        "description": "A playlists for homework.",
+        "description": "A playlist for homework.",
        
         "song_id":[1,2,3]
     },
@@ -16,6 +16,5 @@
         "description": "A playlists for the gym.",
        
         "song_id":[1,2,3]
-
     }
 ]
