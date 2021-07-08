@@ -1,0 +1,30 @@
+* {
+    margin: auto;
+    padding: 5px;
+    background-image: url("staylist-bckgrnd.jpeg");
+    background-position: center;
+}
+
+hr {
+    padding: 0px;
+}
+
+header {
+    font-size: 25px;
+    text-align: center;
+    margin: 2rem;
+    padding: 5px;
+    background-color: blue;
+    animation: shakeX;
+    animation-duration: 1.5s;
+}
+
+section {
+    text-align: center;
+    margin: 3rem;
+}
+
+.sub-btn {
+    margin-left: 75%;
+    align-content: flex-end;
+}
