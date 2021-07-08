@@ -13,36 +13,250 @@
     </head>
 
 <body>
-  <div class="container-fluid">
+
+  <body>
+        
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-2 sf-gray-primary">
-                    <button class="hamburger" id="hamburger">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    <div class="menu wrap">
+                        <input type="checkbox" class="toggler">
+                        <div class="hamburger"><div></div>
+                        <div class="menu">
                     <ul class="list-group">
                         <li class="list-group-item sf-list-group-item">
                             <span class="fa fa-home"></span>
-                            Home
+                            <a href="#">Home</a>
                         </li>
                         <li class="list-group-item sf-list-group-item">
                             <span class="fa fa-search"></span>
-                            Explore
+                            <a href="#">Explore</a>
                         </li>
                         <li class="list-group-item sf-list-group-item">
                             <span class="fa fa-folder-open"></span>
-                            Create New Playlist
+                            <a href="#">Create New Playlist</a>
                         </li>
                     </ul> 
                        
                     <label>Your Library
                     </label>                
                     <ul class="list-group">
-                        <li class="list-group-item sf-list-group-item">Liked Playlists</li>
+                        <li class="list-group-item sf-list-group-item"><a href="#">Liked Playlists</a></li>
                         <!-- <li class="list-group-item sf-list-group-item">Recently Played</li> -->
-                        <li class="list-group-item sf-list-group-item">Songs You Liked</li>
-                        <li class="list-group-item sf-list-group-item">Your Playlists</li>
+                        <li class="list-group-item sf-list-group-item"><a href="#" class="tabs">Songs You Liked</a></li>
+                        <li class="list-group-item sf-list-group-item"><a href="#">Your Playlists</a></li>
     
                     </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+                    <br/>
+                    <br/>
+                    <!-- This image will show playlist cover that is currently being played -->
+                    <!-- <img src="images/album02.jpg" class="img-fluid"/> -->
+                <div class="col-10 sf-playlist">
+                    <br/>
+                    <div class="row">
+                        <div class="col-3">
+                            <input class="form-control sf-input" placeholder="Search here"/>
+                        </div>
+                        <!-- Future implementation; a upgrade account options for premium features 
+                        <div class="offset-4 col-3">
+                            <button class="btn btn-dark btn-block sf-btn-default">UPGRADE YOUR ACCOUNT</button>
+                        </div>  -->     
+                        <div class="col-2">
+                            <!-- Account Circle -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle sf-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="images/staylists-logo.png" class="img-fluid"/>
+                                </button>
+                                <div class="dropdown-menu sf-dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <!-- private session is listen to playlists incognito -->
+                                    <a class="dropdown-item sf-dropdown-item" href="#">Private Session</a>
+                                    <a class="dropdown-item sf-dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item sf-dropdown-item" href="#">Close session</a>
+                                </div>
+                            </div>
+                        </div>                 
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-4">
+                            <!-- Title will need to be data, that shows Playlist title -->
+                            <h4 class="title">Porter Robinson</h4>
+                        </div>
+                        
+                        <!-- <div class="col-2">
+                            <button class="btn btn-dark btn-block sf-btn-default">PAUSE</button>
+                        </div>  -->     
+
+                        <!-- Future implementation of a button with some extra feature 
+                            <div class="col-1">
+                            <button class="btn btn-dark sf-btn-default">
+                                <span class="fa fa-ellipsis-h"></span>
+                            </button>
+                        </div>                   -->
+                    </div>
+                    <br/>
+
+                    <!-- <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="sf-link">GENERAL</a>
+                            <a href="#" class="sf-link">YOUR FRIENDS LISTEN TO</a>
+                            <a href="#" class="sf-link">INFORMATION</a>
+                        </div>
+                    </div> -->
+
+                    <br/>
+                    <div class="row">
+                        <div class="col-4">
+                            <!-- img src will need to be pulled from data, the image selected for the playlist from user -->
+                            <img src="images/album02.jpg" class="img-fluid animate__animated animate__fadeInLeft"/>
+                        </div>
+                        <!-- songs shown are supposed to be data not static -->
+                        <div class="col-8">
+                            <label>2014</label>
+                            <h2 class="title">Worlds</h2>
+                            <button class="btn btn-dark sf-btn-default">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                           
+                            <!-- <button class="btn btn-dark btn-block sf-btn-primary">FOLLOW</button> -->
+                        
+                           <button class="btn btn-dark sf-btn-default-2">
+                                <span class="fa fa">FOLLOW</span>
+                            </button>
+
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div style="height: 300px; overflow: auto">
+                                <table class="table">
+                                    <thead>
+                                        <th>#</th>
+                                        <th></th>
+                                        <th>TITLE</th>
+                                        <th></th>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <!-- LATER FOR BACKEND, we will need to replace these song placeholders with actual
+                                        songs taken from user data -->
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                            <button class="btn btn-dark sf-btn-default-3">
+                                                <span class="fa fa-heart-o"></span>
+                                                </button>
+                                            </td>
+                                            <td>Divinity (featuring Amy Millan)</td>
+                                            <td>6:08</td>
+                                            <td></td>
+                                        </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Sad Machine</td>
+                                                <td>5:50</td>
+                                                <td></td>
+                                            </tr>  
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Years Of War (featuring Breanne Düren and Sean Caskey)</td>
+                                                <td>3:56</td>
+                                                <td></td>
+                                            </tr>   
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Flicker</td>
+                                                <td>4:39</td>
+                                                <td></td>
+                                            </tr>  
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Fresh Static Snow</td>
+                                                <td>5:58</td>
+                                                <td></td>
+                                            </tr>  
+                                            <tr>
+                                                <td>6</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Polygon Dust (featuring Lemaitre)</td>
+                                                <td>3:29</td>
+                                                <td></td>
+                                            </tr>   
+                                            <tr>
+                                                <td>7</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Hear The Bells (featuring Imaginary Cities)</td>
+                                                <td>4:46</td>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Natural Light</td>
+                                                <td>2:21</td>
+                                                <td></td>
+                                            </tr>  
+                                            <tr>
+                                                <td>9</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Lionhearted (featuring Urban Cone)</td>
+                                                <td>4:24</td>
+                                                <td></td>
+                                            </tr>   
+                                            <tr>
+                                                <td>10</td>
+                                                <td>
+                                                    <span class="fa fa-heart-o"></span>
+                                                </td>
+                                                <td>Sea Of Voices</td>
+                                                <td>4:59</td>
+                                                <td></td>
+                                            </tr>   
+                                             
+                                                                                                                                                                                                                                                                                
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Future implementation of a social aspect: maybe a chat / to see what others are 
+                    listening to in real time -->
+                <!-- <div class="col-2 sf-gray-primary">
+                    <div style="text-align: center; margin-top: 100%">
+                        <h5 class="title">See what your friends are listening to</h5><br/>
+                        <button class="btn btn-dark sf-btn-default">MEET FRIENDS</button>        
+                    </div>
+                </div> -->
+            </div>
+
+
 
 
 
@@ -59,6 +273,10 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
