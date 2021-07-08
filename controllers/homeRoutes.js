@@ -13,13 +13,13 @@ router.get('/', async (req, res) => {
       //   },
       // ],
     });
+    console.log("songData", songData)
+    const allSongs = songData.map((song) => song.get({ plain: true }));
   
-    const song = songData.map((song) => song.get({ plain: true }));
-  
-    res.render('song', { 
-      song, 
-      // logged_in: req.session.logged_in 
-    });
+    res.render('song', {allSongs})
+    //   song, 
+    //   // logged_in: req.session.logged_in 
+    // });
   } catch (err) {
     res.status(500).json(err);
   }
