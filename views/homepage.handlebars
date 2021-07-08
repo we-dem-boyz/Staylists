@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-4">
 
-                    <h4 class="title">Porter Robinson</h4>
+                    <h4 class="title">{{playlists.name}}</h4>
                 </div>
 
             </div>
@@ -71,12 +71,11 @@
             <div class="row">
                 <div class="col-4">
 
-                    <img src="images/album02.jpg" class="img-fluid animate__animated animate__fadeInLeft" />
+                    <img src="images/album02.jpg"/>
                 </div>
 
                 <div class="col-8">
-                    <label>2014</label>
-                    <h2 class="title">Worlds</h2>
+                    <h2 class="title">{{playlists.name}}</h2>
                     <button class="btn btn-dark sf-btn-default">
                         <span class="fa fa-heart-o"></span>
                     </button>
@@ -113,12 +112,8 @@
                                             <span class="fa fa-heart-o"></span>
                                         </button>
                                     </td>
-                                    <td>{{playlists.name}}</td>
-                                    <td>{{playlists.description}}</td>
-                                    <td>{{playlists.date_created}}</td>
-                                    {{!-- <td>Divinity (featuring Amy Millan)</td> --}}
-                                    <td>6:08</td>
-                                    <td></td>
+                                    
+                              
                                 </tr>
 
 
@@ -129,9 +124,28 @@
                                             <span class="fa fa-heart-o"></span>
                                         </button>
                                     </td>
-                                    {{!-- <td>{{song.name}}</td>
-                                    <td>{{song.duration}}</td> --}}
-                                    <td></td>
+                                    {{!-- <td>{{playlists.name}}</td>
+                                    <td>{{playlists.description}}</td>
+                                    <td>{{playlists.date_created}}</td> --}}
+
+                                    <table>
+    {{!-- <tr>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Artist</td>
+    </tr> --}}
+
+    {{#each allSongs as |songs| }}
+
+    <tr>
+        <td>{{songs.name}}</td>
+        <td>{{songs.genre}}</td>
+        <td>{{songs.artist}}</td>
+    </tr>
+
+    {{/each}}
+</table>
+                                  
                                 </tr>
 
                                 {{/each}}
