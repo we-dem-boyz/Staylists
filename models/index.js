@@ -10,9 +10,9 @@ playlist.belongsTo(User, {
   foreignKey: 'user_id'
 })
 
-playlist.hasMany(Song, {
-  foreignKey: "Song_id"
-})
-Song.belongsToMany(Playlist, { through: Song })
+Playlist.hasMany(Song, {
+  foreignKey: "user_id"
+});
+
 
 module.exports = { User, Playlist, Song }

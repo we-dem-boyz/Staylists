@@ -3,18 +3,18 @@
         "name": "Playlist 1",
         "description": "A playlist for homework.",
        
-        "song_id":[1,2,3]
+        "song_id": 1
     },
     {
         "name": "Playlist 2",
         "description": "A playlists for cooking",
        
-        "song_id":[1,2,3]
+        "song_id": 2
     },
     {
         "name": "Playlist 3",
         "description": "A playlists for the gym.",
        
-        "song_id":[1,2,3]
+        "song_id": 3
     }
 ]

@@ -108,7 +108,7 @@
                                         <tr>
                                          
                                             <td>
-                                                <button class="btn btn-dark sf-btn-default">
+                                                <button clasd>s="btn btn-dark sf-btn-default">
                                                 <span class="fa fa-heart-o"></span>
                                                 </button>
                                             </td>
@@ -116,8 +116,9 @@
                                             <td>6:08</td>
                                             <td></td>
                                         </tr>
-
-
+                                             <td>{{playlists.name}}</td>
+                                            <td>{{playlists.description}}</td>
+                                            <td>{{playlists.date_created}}</td>
                                          <tr>
                                          
                                             <td>
@@ -125,11 +126,10 @@
                                                 <span class="fa fa-heart-o"></span>
                                                 </button>
                                             </td>
-                                            <td>{{song.name}}</td>
-                                            <td>{{song.duration}}</td>
+                                            
                                             <td></td>
                                         </tr>
-                                             
+                                         {{/each}}    
                                                                                                                                                                                                                                                                                 
                                     </tbody>
                                 </table>
