@@ -102,7 +102,7 @@
                                     <tbody>
                                         <!-- LATER FOR BACKEND, we will need to replace these song placeholders with actual
                                         songs taken from user data -->
-                                        {{#each song as |song| }}
+                                        {{#each playlist as |playlists| }}
 
                                         
                                         <tr>
@@ -112,7 +112,10 @@
                                                 <span class="fa fa-heart-o"></span>
                                                 </button>
                                             </td>
-                                            <td>Divinity (featuring Amy Millan)</td>
+                                            <td>{{playlists.name}}</td>
+                                            <td>{{playlists.description}}</td>
+                                            <td>{{playlists.date_created}}</td>
+                                            {{!-- <td>Divinity (featuring Amy Millan)</td> --}}
                                             <td>6:08</td>
                                             <td></td>
                                         </tr>
@@ -125,12 +128,12 @@
                                                 <span class="fa fa-heart-o"></span>
                                                 </button>
                                             </td>
-                                            <td>{{song.name}}</td>
-                                            <td>{{song.duration}}</td>
+                                            {{!-- <td>{{song.name}}</td>
+                                            <td>{{song.duration}}</td> --}}
                                             <td></td>
                                         </tr>
                                              
-                                                                                                                                                                                                                                                                                
+                                    {{/each}}                                                                     
                                     </tbody>
                                 </table>
                             </div>
