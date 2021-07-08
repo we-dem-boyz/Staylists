@@ -115,137 +115,45 @@
                             <img src="images/album02.jpg" class="img-fluid animate__animated animate__fadeInLeft"/>
                         </div>
                         <!-- songs shown are supposed to be data not static -->
-                        <div class="col-8">
-                            <label>2014</label>
-                            <h2 class="title">Worlds</h2>
+        <div class="col-8">
+                            <label>PLAYLIST</label>
+                            <h2 class="title">{{playlists.name}}</h2>
                             <button class="btn btn-dark sf-btn-default">
-                                <span class="fa fa-heart-o"></span>
+                                <span class="fa fa-heart-o"> LIKE PLAYLIST</span>
                             </button>
-                           
-                            <!-- <button class="btn btn-dark btn-block sf-btn-primary">FOLLOW</button> -->
-                        
-                           <button class="btn btn-dark sf-btn-default-2">
-                                <span class="fa fa">FOLLOW</span>
-                            </button>
-
                         </div>
                     </div>
                     <br/>
-
                     <div class="row">
                         <div class="col-12">
                             <div style="height: 300px; overflow: auto">
                                 <table class="table">
                                     <thead>
-                                        <th>#</th>
-                                        <th></th>
+                                        <th>Artist</th>
+                                        <th>Like Song</th>
                                         <th>TITLE</th>
-                                        <th></th>
-                                        
+                                        <th>GENRE</th>
                                     </thead>
                                     <tbody>
-                                        <!-- LATER FOR BACKEND, we will need to replace these song placeholders with actual
-                                        songs taken from user data -->
                                         <tr>
-                                            <td>1</td>
+                                            <td>{{song.artist}}</td>
                                             <td>
                                             <button class="btn btn-dark sf-btn-default-3">
                                                 <span class="fa fa-heart-o"></span>
                                                 </button>
                                             </td>
-                                            <td>Divinity (featuring Amy Millan)</td>
-                                            <td>6:08</td>
-                                            <td></td>
+                                            <td>{{song.name}}</td>
+                                            <td>{{song.genre}}</td>
                                         </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Sad Machine</td>
-                                                <td>5:50</td>
-                                                <td></td>
-                                            </tr>  
-                                            <tr>
-                                                <td>3</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Years Of War (featuring Breanne Düren and Sean Caskey)</td>
-                                                <td>3:56</td>
-                                                <td></td>
-                                            </tr>   
-                                            <tr>
-                                                <td>4</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Flicker</td>
-                                                <td>4:39</td>
-                                                <td></td>
-                                            </tr>  
-                                            <tr>
-                                                <td>5</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Fresh Static Snow</td>
-                                                <td>5:58</td>
-                                                <td></td>
-                                            </tr>  
-                                            <tr>
-                                                <td>6</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Polygon Dust (featuring Lemaitre)</td>
-                                                <td>3:29</td>
-                                                <td></td>
-                                            </tr>   
-                                            <tr>
-                                                <td>7</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Hear The Bells (featuring Imaginary Cities)</td>
-                                                <td>4:46</td>
-                                                <td></td>
-                                            </tr> 
-                                            <tr>
-                                                <td>8</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Natural Light</td>
-                                                <td>2:21</td>
-                                                <td></td>
-                                            </tr>  
-                                            <tr>
-                                                <td>9</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Lionhearted (featuring Urban Cone)</td>
-                                                <td>4:24</td>
-                                                <td></td>
-                                            </tr>   
-                                            <tr>
-                                                <td>10</td>
-                                                <td>
-                                                    <span class="fa fa-heart-o"></span>
-                                                </td>
-                                                <td>Sea Of Voices</td>
-                                                <td>4:59</td>
-                                                <td></td>
-                                            </tr>   
-                                             
-                                                                                                                                                                                                                                                                                
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
                 <!-- Future implementation of a social aspect: maybe a chat / to see what others are 
                     listening to in real time -->
                 <!-- <div class="col-2 sf-gray-primary">
@@ -265,9 +173,10 @@
   <main class="container container-fluid mt-5">
     {{{ body }}}
   </main>
-  <footer>
-      Created by We-Dem-Boyz plus Lexi, heck yeah bro
-  </footer>
+  <footer id="section-a">
+                <p>Created by an amazing team consisting of: <a href="https://github.com/AlexG1040">Alex Garcia</a>, <a href="https://github.com/drewg07">Drew Gillespie</a>, <a href="https://github.com/LYBLRey">Sareybodd (Rey) Chhorn</a>, <a href="https://github.com/MikeAdu">Michael Adusah</a>, <a href="https://github.com/ShaneLe2121">Shane Le</a>, <a href="https://github.com/Sonlocgiau">Son Le</a>, with massive help from <a href="https://github.com/puakehaulani">Lexi Jack!</a>
+                    Thank you for using our site!</p>
+            </footer>
 
   <!-- Only include the logout script if the user is logged in -->
   {{#if logged_in}}
