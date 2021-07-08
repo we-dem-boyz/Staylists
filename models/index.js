@@ -1,6 +1,8 @@
 const User = require('./User');
 const Playlist = require('./Playlist');
 const Song = require ("./Song")
+const Server = require ('../server')
+
 User.hasMany(Playlist, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
