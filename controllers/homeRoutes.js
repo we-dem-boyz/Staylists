@@ -1,59 +1,24 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Playlist, Song, User } = require('../models');
+const { Playlist, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const songData = await Song.findAll({
-      // include: [
-      //   {
-      //     model: Playlist,
-      //     attributes: ['name', 'description'],
-      //   },
-      // ],
-    });
-    console.log("songData", songData)
-    const allSongs = songData.map((song) => song.get({ plain: true }));
-  
-    res.render('song', {allSongs})
-    //   song, 
-    //   // logged_in: req.session.logged_in 
-    // });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/explore', async (req, res) => {
-  try {
-    const playlistData = await Playlist.findAll({
-      // include: [
-      //   {
-      //     model: Playlist,
-      //     attributes: ['name', 'description'],
-      //   },
-      // ],
+    const PlaylistData = await Playlist.findAll({
+      include: [
+        {
+          model: Playlist,
+          attributes: ['name', 'description'],
+        },
+      ],
     });
   
-    const playlist = playlistData.map((playlist) => playlist.get({ plain: true }));
+      // Serialize data so the template can read it
+    const Playlist = PlaylistData.map((Playlist) => Playlist.get({ plain: true }));
   
     res.render('homepage', { 
-      playlist,
-      // logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/home', async (req, res) => {
-  try {
-    const user = userData.get({ plain: true });
-
-    req.render('user', {
-      ...user,
-      logged_in: req.session.logged_in
+      Playlists, 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -100,22 +65,6 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile', async (req, res) => {
-  try {
-    // const userData = await User.findByPk(req.session.user_id, {
-    // });
-
-    // const user = userData.get({ plain: true });
-
-    res.render('profile', {
-      ...user,
-      // logged_in: true,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');
@@ -136,3 +85,4 @@ router.get('/login', (req, res) => {
 //   }
 
 module.exports = router;
+  
