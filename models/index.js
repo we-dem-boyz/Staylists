@@ -1,7 +1,7 @@
 const User = require('./User');
 const Playlist = require('./Playlist');
 const Song = require ("./Song")
-const Server = require ('../server')
+const Connection = require ('../config/connection')
 
 User.hasMany(Playlist, {
   foreignKey: 'user_id',
